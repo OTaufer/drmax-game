@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0ainj33hq1vv"]
+
+[ext_resource type="Script" path="res://Scripts/Objects/Message.gd" id="1_mmyb5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qrgsu"]
+font_size = 40
+
+[node name="Message" type="Popup"]
+size = Vector2i(648, 300)
+visible = true
+script = ExtResource("1_mmyb5")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(648, 300)
+offset_right = 648.0
+offset_bottom = 300.0
+mouse_filter = 0
+text = "Olalala"
+label_settings = SubResource("LabelSettings_qrgsu")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="gui_input" from="Label" to="." method="_on_label_gui_input"]

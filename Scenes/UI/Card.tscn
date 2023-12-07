@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://b63vcguy78t5h"]
+
+[ext_resource type="Script" path="res://Scenes/UI/Card.gd" id="1_hbcbb"]
+[ext_resource type="Texture2D" uid="uid://d3acouyil64qu" path="res://Assets/Images/card.png" id="2_6akxr"]
+
+[node name="CardBase" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -149.0
+offset_bottom = 924.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_hbcbb")
+
+[node name="CardImage" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_6akxr")
+stretch_mode = 5
+
+[node name="BoxContainer" type="BoxContainer" parent="CardImage"]
+custom_minimum_size = Vector2(180, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.087
+anchor_top = 0.907
+anchor_right = 0.919
+anchor_bottom = 0.947
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+
+[node name="CardText" type="Label" parent="CardImage/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+text = "bla bla bla bla"
+horizontal_alignment = 1
+autowrap_mode = 2
